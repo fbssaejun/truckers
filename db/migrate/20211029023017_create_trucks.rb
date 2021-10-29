@@ -7,8 +7,6 @@ class CreateTrucks < ActiveRecord::Migration[6.1]
       t.integer :year
       t.integer :capacity
       t.boolean :reserved
-      t.datetime :created_at
-      t.datetime :updated_at
 
       t.timestamps
     end
