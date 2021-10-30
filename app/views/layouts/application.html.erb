@@ -19,6 +19,9 @@
         <ul class="nav nav-tabs pull-right">
           <% if current_user %>
             <li class="signed-in-user">Hello, <b><i><%= current_user.name %></i></b> !<li>
+            <li>
+            <%= link_to "Logout", '/logout' %>
+            </li>
           <% else %>
             <li>
               <%= link_to 'Register', '/signup' %>
