@@ -1,3 +1,3 @@
 class Truck < ApplicationRecord
-  validate :name, :company, :capacity
+  validate :name, :company_id, :capacity
 end

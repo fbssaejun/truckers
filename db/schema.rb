@@ -46,4 +46,6 @@ ActiveRecord::Schema.define(version: 2021_10_30_215827) do
     t.string "role", null: false
   end
 
+  add_foreign_key "trucks", "companies"
+
 end
