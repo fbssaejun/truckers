@@ -1,0 +1,11 @@
+<h1>Available trucks</h1>
+
+<% @trucks.each do |truck| %>
+  <tr>
+    <td><%= truck.name %></td>
+    <td><%= truck.type %></td>
+    <td><%= link_to "Show" %></td>
+    <td><%= link_to "Edit" %></td>
+    <td><%= link_to "Destroy" %></td>
+  </tr>
+<% end %>

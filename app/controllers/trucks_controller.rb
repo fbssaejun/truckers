@@ -1,7 +1,7 @@
 class TrucksController < ApplicationController
 
   def index
-    @trucks = Truck.order(id :desc).all
+    @trucks = Truck.all
   end
 
   def show

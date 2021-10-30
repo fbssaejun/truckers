@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   get 'welcome/index'
   get '/login' => 'sessions#new'
   get '/signup' => 'users#create'
+  get '/trucks' => 'trucks#index'
 
   get 'register' => 'trucks#new', :as => :register
   get 'companies/create'
