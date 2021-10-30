@@ -26,7 +26,7 @@ ActiveRecord::Schema.define(version: 2021_10_29_023017) do
 
   create_table "trucks", force: :cascade do |t|
     t.string "name"
-    t.integer "company_id", null: false
+    t.integer "company_id"
     t.string "type"
     t.integer "year"
     t.integer "capacity"
@@ -43,7 +43,6 @@ ActiveRecord::Schema.define(version: 2021_10_29_023017) do
     t.string "password_hash"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.string "role", default: "driver"
   end
 
 end
