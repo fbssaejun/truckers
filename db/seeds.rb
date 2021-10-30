@@ -8,3 +8,7 @@
 
 
 trucker = Company.create(name: 'Trucker', email: 'inquiries@trucker.com', phone_number: '1-111-222-33333', description: 'Truck rental company')
+
+Truck.create(company_id: 1, name: 'fancy truck', year: 2021, capacity: 1000)
+Truck.create(company_id: 1, name: 'cool truck', year: 2020, capacity: 1300)
+Truck.create(company_id: 1, name: 'classic truck', year: 1999, capacity: 900)

@@ -12,14 +12,16 @@
     <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container-fluid">
         <div class="navbar-header">
+        <%= link_to :root do %>
           <img class="nav-truck" src="<%= image_path('truck_grey.png') %>" width="37" height="37"/>
+        <% end %>
         </div>
         <ul class="nav nav-tabs pull-right">
             <li>
-              <%= link_to 'Register' %>
+              <%= link_to 'Register', '/signup' %>
             </li>
             <li>
-              <%= link_to 'Login' %>
+              <%= link_to 'Login', '/login' %>
             </li>
           </ul>
       </div>

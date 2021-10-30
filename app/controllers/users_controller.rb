@@ -10,4 +10,8 @@ class UsersController < ApplicationController
       render action: "new"
     end
   end
+
+  def create 
+  end
+  
 end

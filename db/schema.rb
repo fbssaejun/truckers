@@ -26,11 +26,11 @@ ActiveRecord::Schema.define(version: 2021_10_29_023017) do
 
   create_table "trucks", force: :cascade do |t|
     t.string "name"
-    t.integer "company_id"
+    t.integer "company_id", null: false
     t.string "type"
     t.integer "year"
     t.integer "capacity"
-    t.boolean "reserved"
+    t.boolean "reserved", default: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -45,4 +45,5 @@ ActiveRecord::Schema.define(version: 2021_10_29_023017) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  add_foreign_key "trucks", "companies"
 end
