@@ -14,6 +14,6 @@ User.create(company_id: 1, name: 'Anthony', role: 'admin', email: 'admin@trucker
 User.create(company_id: 1, name: 'Franchesca', role: 'driver', email: 'driver@trucker.com', password_hash: '$2b$12$h0q30TiUGYGhqvnBtm6hdOps3MQhSrOi6C89vyBCcYNqzxkpAoJrm') # 123456
 
 
-Truck.create(company_id: 1, name: 'fancy truck', year: 2021, capacity: 1000)
-Truck.create(company_id: 1, name: 'cool truck', year: 2020, capacity: 1300)
-Truck.create(company_id: 1, name: 'classic truck', year: 1999, capacity: 900)
+Truck.create(company_id: 1, name: 'fancy truck', vehicle_type: 'Dump truck', year: 2021, capacity: 1000)
+Truck.create(company_id: 1, name: 'cool truck', vehicle_type: 'Tow truck', year: 2020, capacity: 1300)
+Truck.create(company_id: 1, name: 'classic truck', vehicle_type: 'Box truck', year: 1999, capacity: 900)
