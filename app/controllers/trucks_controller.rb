@@ -16,4 +16,10 @@ class TrucksController < ApplicationController
     @truck = Truck.new(params[:truck])
   end
 
+  def is_reserved?
+    truck.reserved == true
+  end
+  helper_method :is_admin?
+
+
 end
