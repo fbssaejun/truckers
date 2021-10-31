@@ -1,5 +1,12 @@
 Rails.application.routes.draw do
+
+
+  resources :trucks do
+  end
+  
   root :to => "welcome#index"
+
+
 
   get 'welcome/index'
   get 'sessions/new'
