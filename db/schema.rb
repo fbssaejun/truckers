@@ -43,7 +43,7 @@ ActiveRecord::Schema.define(version: 2021_10_30_215827) do
     t.string "password_hash"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.string "role", null: false
+    t.string "role"
   end
 
   add_foreign_key "trucks", "companies"

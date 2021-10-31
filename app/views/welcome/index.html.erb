@@ -1,5 +1,11 @@
-<h1>Welcome to Truckers</h1>
-<p>You can check what trucks are available through your company.</p>
+<div class="welcome-main">
+  <h1>Welcome to Truckers</h1>
+  <p>You can check what trucks are available through your company.</p>
 
-<%= link_to 'Trucks', '/trucks' %>
+  <% if current_user %>
+    <%= link_to 'View Trucks', '/trucks' %>
+  <% else %>
+    <p>Please <strong>login</strong> first to view trucks!</p>
+  <% end %>
+</div>
 
