@@ -20,6 +20,18 @@ class TrucksController < ApplicationController
     @truck = Truck.new(params[:truck])
   end
 
+  def edit
+    @truck = Truck.find(params[:id])
+  end
+
+  def update
+    @truck = Truck.find(params[:id])
+    @truck.update(truck_params)
+
+    redirect_to '/trucks'
+  end
+
+
   def destroy
     @truck = Truck.find(params[:id])
     @truck.destroy
@@ -35,7 +47,7 @@ class TrucksController < ApplicationController
   helper_method :is_admin?
 
   def truck_params
-    params.require(:truck).permit(:name, :company_id, :type, :year, :capacity, :reserved)
+    params.require(:truck).permit(:name, :vehicle_type, :year, :capacity)
   end
 
 end

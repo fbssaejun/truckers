@@ -21,8 +21,10 @@
           <tr>
             <td><%= truck.name %></td>
             <td><%= truck.vehicle_type %></td>
-            <td><%= link_to "Show" %></td>
-            <td><%= link_to "Edit" %></td>
+            <td><%= truck.company_id %></td>
+            <td><%= truck.year %></td>
+            <td><%= truck.capacity %></td>
+            <td><%= link_to "Edit", edit_truck_path(truck) %></td>
             <td><%= link_to "Delete", truck, method: :delete %></td>
           </tr>
         <% end %>
