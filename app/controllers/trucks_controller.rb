@@ -8,16 +8,26 @@ class TrucksController < ApplicationController
     @truck = Truck.find(params[:id])
   end
 
+  def new
+    @truck = Truck.new
+  end
+
   def reserve
     @truck = Truck.find(params[:id])
     @truck.reserved = true
     @truck.save
     redirect_to '/trucks'
   end
-
   
   def create
-    @truck = Truck.new(params[:truck])
+    @truck = Truck.new(truck_params)
+
+    respond_to do |format|
+      if @truck.save
+      format.html { redirect_to @truck, notice: 'New truck has been created!' }
+      end
+    end
+
   end
 
   def edit

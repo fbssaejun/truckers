@@ -2,7 +2,7 @@
 
   <% if current_user && is_admin?  %>
 
-  <button class='btn'>Add Truck</button>
+  <button class='btn'><%= link_to 'Add Truck', new_truck_path %></button>
 
 
   <table class="table table-dark">
