@@ -13,10 +13,13 @@ class TrucksController < ApplicationController
   end
 
   def reserve
-    @truck = Truck.find(params[:id])
-    @truck.reserved = true
-    @truck.save
-    redirect_to '/trucks'
+    @truck = Truck.find(params[:id]).update(reserved: true)
+    redirect_to trucks_path
+  end
+
+  def cancel
+    @truck = Truck.find(params[:id]).update(reserved: false)
+    redirect_to trucks_path
   end
   
   def create

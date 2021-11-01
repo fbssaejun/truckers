@@ -2,6 +2,10 @@ Rails.application.routes.draw do
 
 
   resources :trucks do
+    member do
+      post 'reserve'
+      post 'cancel'
+    end
   end
   
   root :to => "welcome#index"

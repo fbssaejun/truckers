@@ -46,10 +46,9 @@
             <td><%= truck.capacity %></td>
           <% if truck.reserved %>
             <td style="color:green">Reserved</td>
+            <td><%= link_to 'Cancel Reservation', cancel_truck_path(truck), method: :post %></td>
           <% else %>
-            <%= form_for 'trucks#reserve' do %>
-              <td><%= submit_tag "Reserve", :class => "btn btn-primary" %></td>
-            <% end %>
+              <td><%= link_to 'Reserve', reserve_truck_path(truck), method: :post %></td>
           <% end %>
           </tr>
         <% end %>
