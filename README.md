@@ -9,7 +9,7 @@ A simple Rails 6 & Ruby 3.0.0 Application to be used for practice.
 * `bundle install`
 * `rake db:create`
 * `rails db:migrate`
-* `rails server` and the application is up and running
+* `rails s -b 0.0.0.0` and the application is up and running
 
 ### Scenario
 
