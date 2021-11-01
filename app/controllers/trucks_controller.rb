@@ -6,6 +6,7 @@ class TrucksController < ApplicationController
 
   def show
     @truck = Truck.find(params[:id])
+    @company = Company.find(@truck.company_id)
   end
 
   def new
