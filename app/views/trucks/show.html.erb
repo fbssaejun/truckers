@@ -1,0 +1,12 @@
+
+<h1><%= @truck.name %></h1>
+
+<h3>Type: <%= @truck.vehicle_type%></h3>
+<h3>Comapny: <%= @truck.company_id%></h3>
+<h3>Year: <%= @truck.year%></h3>
+<h3>Capacity: <%= @truck.capacity%></h3>
+<h3>Reserved: <%= @truck.reserved.to_s%></h3>
+
+
+<h4><%= link_to "Edit", edit_truck_path(@truck) %></h4>
+<h4><%= link_to "Delete", @truck, method: :delete %></h4>

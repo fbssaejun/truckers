@@ -30,7 +30,7 @@ ActiveRecord::Schema.define(version: 2021_10_30_215827) do
     t.string "vehicle_type"
     t.integer "year"
     t.integer "capacity"
-    t.boolean "reserved"
+    t.boolean "reserved", default: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
